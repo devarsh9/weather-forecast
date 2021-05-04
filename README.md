@@ -1,2 +1,2 @@
-# weather-forecast
-weather prediction using prophet time series. 
+# weather_forecast
+using prophet time series

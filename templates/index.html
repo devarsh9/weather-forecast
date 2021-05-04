@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>IPL Match Win Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+
+</head>
+
+<body >
+ <div class="login">
+	<h2>IPL Match Win Predictor </h2>
+     <h3> Enter the following values for the second batting team to predict the match winner:</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+    Home/Away [1,0] :	<input type="text" name="Home/Away" placeholder="" required="required" /><br>
+    <br><label>Balls Remaining :</label>   <input type="text" name="Balls remaining" placeholder="" required="required" />
+		<br><br><label>Runs Required :</label><input type="text" name="Runs required" placeholder="" required="required" />
+   <br> <br><label>Wickets Lost :</label><input type="text" name="Wickets lost" placeholder="" required="required" />
+		<br><br><label>Toss W/L [1,0] :</label><input type="text" name="Toss W/L" placeholder="" required="required" />
+
+       <br>
+       <br>
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>

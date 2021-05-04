@@ -1,0 +1,13 @@
+Flask==1.1.2
+gunicorn==20.1.0
+scikit-learn==0.24.1
+joblib==1.0.1
+pickle4==0.0.1
+sklearn==0.0
+setuptools==49.2.1
+numpy==1.20.2
+Cython==0.29.23
+wheel==0.36.2
+pandas==1.2.4
+pystan==2.19.1.1
+fbprophet==0.7.1
